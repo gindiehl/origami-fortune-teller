@@ -37,12 +37,15 @@ User.prototype.shuffle = function(input) {
 
 /////////////////User Logic ////////////////////
 $(document).ready(function(){
+
+  var newUser = new User(userName, userColor); // instantiate new user object instance
+
   $("#inquire").click(function() {
     //set variable to collect & store user input for name
     var userName = $("#name").val();
     var userColor =$("#color").val();
-    // instantiate new user object instance
-    var newUser = new User(userName, userColor);
+
+    newUser.shuffle(newUser);
 
     $("#output").text(newUser.name + " " + newUser.color);
 
