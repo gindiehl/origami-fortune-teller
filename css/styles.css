@@ -2,3 +2,9 @@
   margin-top: 20px;
   font-size: 2em;
 }
+.right {
+  transform: translateX(100px);
+}
+#target{
+  transition: all 0.2s;
+}
