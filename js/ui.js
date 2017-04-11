@@ -1,6 +1,6 @@
 ////////////////User Logic ////////////////////
-/////////////////User Logic ////////////////////
-/////////////////User Logic ////////////////////
+////////////////User Logic ////////////////////
+////////////////User Logic ////////////////////
 
 
 $(document).ready(function(){
@@ -13,17 +13,13 @@ $(document).ready(function(){
 
     (function myLoop (i) {
       setTimeout(function () {
-        $("#target").addClass("right");
-          setTimeout(function() {
-            $("#target").removeClass("right");
-          }, 300);
 
+          $(".teller").toggle();
           $("#output").text(splitName[(i-times)*-1]);
 
-        if (--i) myLoop(i);
+        if (--i) { myLoop(i); } else { }
       }, 600)
     })(times);
-
 
   });
 });
