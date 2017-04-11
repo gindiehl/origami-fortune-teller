@@ -1,3 +1,7 @@
-$(document).ready(function(){
+//////////////////Business Logic //////////////////
 
+
+/////////////////User Logic ////////////////////
+$(document).ready(function(){
+  $(newUser)
 });
