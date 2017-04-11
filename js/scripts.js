@@ -22,7 +22,7 @@ $(document).ready(function(){
     // instantiate new user object instance
     var newUser = new User(userName, userColor);
 
-    $("#output")text(newUser.name);
+    $("#output").text(newUser.name);
 
 
 
