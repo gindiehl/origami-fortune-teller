@@ -9,13 +9,14 @@ $(document).ready(function() {
 
   $("#name").click(function() {
     var inputtedName = $("#userName").val();//collect & store user input for name
-    // newUser.name = inputtedName;
-    if (shuffle(newUser.name) === 0) {
-      var options = newFortuneTeller.availOptions[0];
-    } else {
-      var options = newFortuneTeller.availOptions[1];
-    }
+    newUser.name = inputtedName;
+
+
+    // Gather input length just to have that number to use for an animation
+
+
     //------------------------------------------shuffle animation
+    // animate(userName.name);
     $("#show-name").hide();
     $("#color-div").show();
     $("#number-div").hide();
@@ -23,25 +24,30 @@ $(document).ready(function() {
   //---------------------------------------------------------------color input
   $("#color").click(function() {
     var userColor =$("#userColor").val(); //collect ui for color
-    // newUser.color = userColor;
-    if (shuffle(newUser.color) === 0) {
-      var options = newFortuneTeller.availOptions[0];
-    } else {
-      var options = newFortuneTeller.availOptions[1];
-    }
+    newUser.color = userColor;
         //---------------------------------------------shuffle animation
     $("#color-div").hide();
-    $("#output").text("Available options: " + options);
+    // call new shuffle function
+    // check if it returns "even"
     $("#number-div").show();
+    if (shuffle(newUser.name, newUser.color) === "even") {
+      var options = newFortuneTeller.availOptions[1];
+    }
+    else {
+      var options = newFortuneTeller.availOptions[0];
 
-  });
-    //----------------------------------------------------------number input
-  $("#number").click(function() {
-    var userNumber = parseInt($("#userNumber").val()); //
-    // newUser.number = userNumber;
-    alert(newFortuneTeller.fortunes[userNumber-1]);
+    }
 
-    // $("#output").text(newFortuneTeller.fortunes[userFortune -1]);
+    $("#output").text("Available options: ");
+    // loop through the options, and for each option, append to the output
+    // <span>singlen option</span>
+    options.forEach(function(option) {
+      $("#output").append("<span class='option-span'>" + option + "</span> ");
+    });
+    //----------------------------------------------------------option click
+    $(".option-span").click(function() {
+      alert();
+    });
 
   });
 

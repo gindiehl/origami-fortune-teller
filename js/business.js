@@ -27,12 +27,12 @@ function User(name, color) {
 
 
 // function to return lengths of User object parameters
-var shuffle = function(input) {
+var shuffle = function(input1, input2) {
   // var timesShuffled = input.length;
-  var number = input.length;
-  if (number % 2 === 0) {
-    return 1;
+  var sum = input1.length + input2.length;
+  if (sum % 2 === 0) {
+    return "even";
   } else {
-    return 0;
+    return "odd";
   }
 }
