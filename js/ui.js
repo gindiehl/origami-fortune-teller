@@ -69,9 +69,9 @@ $(document).ready(function() {
 
     $("#output").text("Available options: ");
     // loop through the options, and for each option, append to the output
-    options.forEach(function(option) {
+    options.forEach(function(option, i = 0) {
       $("#output").append("<span class='option-span'>" + option + "</span> ");
-      // write an attribute "data value" to div
+      $('.hover-click:nth-child(' + (i+1) + ')').attr('data-value', option);
     });
     //----------------------------------------------------------option click
     $(".option-span").click(function() {

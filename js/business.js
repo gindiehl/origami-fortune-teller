@@ -6,7 +6,7 @@ function FortuneTeller(fortunes, availOptions) {
   this.availOptions = availOptions;
 }
 
-var newFortuneTeller = new FortuneTeller([], [[1,4,5,8],[2,3,6,7]]);
+var newFortuneTeller = new FortuneTeller([], [[1,4,8,5],[2,3,6,7]]);
 
 newFortuneTeller.fortunes = [
   "You are fortune 1!",
