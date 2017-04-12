@@ -15,26 +15,36 @@
       <h1> Origami </h1>
     </div>
     <div class="container">
-      <div id = "show-name">
+
+      <div id="letters"></div>
+
+      <div id = "name-div" class="section">
         <input type="text" id="userName" placeholder="Enter your name">
         <button class="btn btn-success" type="button" id="name" >Enter</button>
       </div>
 
-      <div class="dont-show" id="color-div">
+      <div class="dont-show section" id="color-div">
         <input type="text" id="userColor" placeholder="Enter your favourite color">
         <button class="btn btn-success" type="button" id="color">Enter</button>
       </div>
 
-      <div class="dont-show" id="number-div">
+      <div class="dont-show section" id="number-div">
         <input type="text" id="userNumber" placeholder="Enter a number">
         <button class="btn btn-success" type="button" id="number">Enter</button>
-        <div id="output"></div>
+      </div>
+
+      <div id="teller-wrapper">
+        <!-- <img class="teller" id="closed" src="img/first.png" alt="" /> -->
+        <div id="moving-tellers" class="">
+          <img class="teller run dont-show" src="img/second.png" alt="" />
+          <img class="teller run" src="img/third.png" alt="" />
+        </div>
       </div>
 
     </div>
 
-    <div class="final-output dont-show">
-    </div>
+    <div id="output" class="dont-show"></div>
+    <div class="final-output dont-show"></div>
 
   </body>
 </html>

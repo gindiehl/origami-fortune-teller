@@ -5,31 +5,61 @@
 
 $(document).ready(function() {
 
-  var newUser = new User("", "");// instantiate new user object instance
+
+  // animation
+  // animation
+  // animation
+  var animate = function(word, after) {
+    $("#letters").show();
+
+    var times = word.length;
+    var splitWord = word.split("");
+
+    (function myLoop (i) {
+      setTimeout(function () {
+
+          $(".run").toggle();
+          $("#letters").text(splitWord[(i-times)*-1]);
+
+        if (--i) {
+           myLoop(i);
+          } else {
+             $(after).show();
+             $("#letters").hide();
+          }
+      }, 600)
+    })(times);
+  }
+
+
+  // instantiate new user object instance
+  var newUser = new User("", "");
+
+
 
   $("#name").click(function() {
     var inputtedName = $("#userName").val();//collect & store user input for name
     newUser.name = inputtedName;
+      $(".section").hide();
+      var showThis = "#color-div";
+    // animation function, passing name
+    animate(inputtedName, showThis);
 
-
-    // Gather input length just to have that number to use for an animation
-
-
-    //------------------------------------------shuffle animation
-    // animate(userName.name);
-    $("#show-name").hide();
-    $("#color-div").show();
-    $("#number-div").hide();
   });
+
+
+
   //---------------------------------------------------------------color input
   $("#color").click(function() {
-    var userColor =$("#userColor").val(); //collect ui for color
-    newUser.color = userColor;
-        //---------------------------------------------shuffle animation
-    $("#color-div").hide();
-    // call new shuffle function
-    // check if it returns "even"
-    $("#number-div").show();
+    var inputtedColor =$("#userColor").val(); //collect ui for color
+    newUser.color = inputtedColor;
+
+    $(".section").hide();
+    var showThis = "#output";
+    // animation function, passing name
+    animate(inputtedColor, showThis);
+
+    // check to see if total length of both inputs are even or odd
     if (shuffle(newUser.name, newUser.color) === "even") {
       var options = newFortuneTeller.availOptions[1];
     }
@@ -44,11 +74,12 @@ $(document).ready(function() {
     });
     //----------------------------------------------------------option click
     $(".option-span").click(function() {
-    $(".final-output").show();
-    $(".final-output").html("<p>" + newFortuneTeller.fortunes[$(this).text()-1] "</p>");
-    $(".final-output").append("<div id='play-again' onClick='window.location.reload()'>Play Again</div>");
+      $(".final-output").show();
+      $("#teller-wrapper").hide();
+      $(".final-output").html("<p>" + newFortuneTeller.fortunes[$(this).text()-1] + "</p>");
+      $(".final-output").append("<div id='play-again' onClick='window.location.reload()'>Play Again</div>");
 
-    $("#number-div").hide();
+      $("#number-div").hide();
 
     });
 

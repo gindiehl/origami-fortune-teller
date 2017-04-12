@@ -5,3 +5,8 @@
 .dont-show{
   display: none;
 }
+.teller {
+  width: 400px;
+  -webkit-filter: drop-shadow(10px 10px 10px #777);
+  filter: drop-shadow(10px 10px 10px #777);
+}
