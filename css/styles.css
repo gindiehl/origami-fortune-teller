@@ -2,3 +2,45 @@
   margin-top: 20px;
   font-size: 2em;
 }
+.dont-show{
+  display: none;
+}
+.teller {
+  width: 400px;
+  -webkit-filter: drop-shadow(10px 10px 10px #777);
+  filter: drop-shadow(10px 10px 10px #777);
+}
+#moving-tellers {
+  position: absolute;
+}
+.hover-click {
+  position: absolute;
+  width: 150px;
+  height: 145px;
+  z-index: 2;
+}
+.hover-click:nth-child(1) {
+  margin-top: 52px;
+  margin-left: 40px;
+  transform: rotate(-7deg);
+  background-color: blue;
+
+}
+.hover-click:nth-child(2) {
+  margin-top: 54px;
+  margin-left: 225px;
+  transform: rotate(15deg);
+  background-color: green;
+}
+.hover-click:nth-child(3) {
+  margin-top: 220px;
+  margin-left: 55px;
+  transform: rotate(-3deg);
+  background-color: orange;
+}
+.hover-click:nth-child(4) {
+  margin-top: 220px;
+  margin-left: 220px;
+  transform: rotate(3deg);
+  background-color: purple;
+}

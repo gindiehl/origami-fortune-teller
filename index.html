@@ -11,15 +11,45 @@
     <title></title>
   </head>
   <body>
+    <div class="jumbotron">
+      <h1> Origami </h1>
+    </div>
+    <div class="container">
 
-  <div class="container">
-    <input id="name" placeholder="Full Name" type="text">
-    <br>
-    <input placeholder="Favorite Color" type="text" id="color" > <br>
-    <input type="number" id="number" min="1" max="8"> <br>
-    <button class="btn btn-success" type="button" id="inquire">Inquire the Fates</button>
-    <div id="output"></div>
-  </div>
+      <div id="letters"></div>
+
+      <div id = "name-div" class="section">
+        <input type="text" id="userName" placeholder="Enter your name">
+        <button class="btn btn-success" type="button" id="name" >Enter</button>
+      </div>
+
+      <div class="dont-show section" id="color-div">
+        <input type="text" id="userColor" placeholder="Enter your favourite color">
+        <button class="btn btn-success" type="button" id="color">Enter</button>
+      </div>
+
+      <div class="dont-show section" id="number-div">
+        <input type="text" id="userNumber" placeholder="Enter a number">
+        <button class="btn btn-success" type="button" id="number">Enter</button>
+      </div>
+
+      <div id="teller-wrapper">
+        <!-- <div class='hover-click'></div> -->
+        <div class='hover-click' data-value='1'></div>
+        <div class='hover-click' data-value='4'></div>
+        <div class='hover-click' data-value='5'></div>
+        <div class='hover-click' data-value='8'></div>
+        <!-- <img class="teller" id="closed" src="img/first.png" alt="" /> -->
+        <div id="moving-tellers" class="">
+          <img class="teller run dont-show" src="img/second.png" alt="" />
+          <img class="teller run" src="img/third.png" alt="" />
+        </div>
+      </div>
+
+    </div>
+
+    <!-- <div id="output" class="dont-show"></div> -->
+    <!-- <div class="final-output dont-show"></div> -->
 
   </body>
 </html>
