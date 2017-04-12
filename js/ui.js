@@ -35,19 +35,24 @@ $(document).ready(function() {
     }
     else {
       var options = newFortuneTeller.availOptions[0];
-
     }
 
     $("#output").text("Available options: ");
     // loop through the options, and for each option, append to the output
-    // <span>singlen option</span>
     options.forEach(function(option) {
-      $("#output").append("<span class='option-span'>" + option + "</span> ");
+    $("#output").append("<span class='option-span'>" + option + "</span> ");
     });
     //----------------------------------------------------------option click
     $(".option-span").click(function() {
-      alert();
+    $(".final-output").show();
+    $(".final-output").html("<p>" + newFortuneTeller.fortunes[$(this).text()-1] "</p>");
+    $(".final-output").append("<div id='play-again' onClick='window.location.reload()'>Play Again</div>");
+
+    $("#number-div").hide();
+
     });
+
+
 
   });
 
