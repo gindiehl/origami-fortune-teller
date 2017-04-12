@@ -11,23 +11,27 @@
     <title></title>
   </head>
   <body>
-
-  <div class="container">
-    <input id="name" placeholder="Full Name" type="text">
-    <br>
-    <input placeholder="Favorite Color" type="text" id="color" > <br>
-    <input type="number" id="number" min="1" max="8"> <br>
-    <button class="btn btn-success" type="button" id="inquire">Inquire the Fates</button>
-    <div id="output"></div>
-  </div>
-
-    <div id="output">
-
+    <div class="jumbotron">
+      <h1> Origami </h1>
     </div>
+    <div class="container">
+      <div id = "show-name">
+        <input type="text" id="userName" placeholder="Enter your name">
+        <button class="btn btn-success" type="button" id="name" >Enter</button>
+      </div>
 
+      <div class="dont-show" id="color-div">
+        <input type="text" id="userColor" placeholder="Enter your favourite color">
+        <button class="btn btn-success" type="button" id="color">Enter</button>
+      </div>
 
+      <div class="dont-show" id="number-div">
+        <input type="text" id="userNumber" placeholder="Enter a number">
+        <button class="btn btn-success" type="button" id="number">Enter</button>
+        <div id="output"></div>
+      </div>
+      
     </div>
-
 
   </body>
 </html>
