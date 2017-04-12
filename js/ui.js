@@ -5,12 +5,16 @@
 
 $(document).ready(function() {
 
+  var $draggable = $('.draggable').draggabilly({
+  // options...
+  })
+
 
   // animation
   // animation
   // animation
   var animate = function(word, after) {
-    $("#letters").show();
+    // $("#letters").show();
 
     var times = word.length;
     var splitWord = word.split("");
@@ -25,7 +29,8 @@ $(document).ready(function() {
            myLoop(i);
           } else {
              $(after).show();
-             $("#letters").hide();
+             $("#letters").text("");
+            //  $("#letters").hide();
           }
       }, 600)
     })(times);
@@ -67,7 +72,7 @@ $(document).ready(function() {
       var options = newFortuneTeller.availOptions[0];
     }
 
-    $("#output").text("Available options: ");
+    $("#output").html("<p>Available options: </p>");
     // loop through the options, and for each option, append to the output
     options.forEach(function(option) {
     $("#output").append("<span class='option-span'>" + option + "</span> ");
@@ -77,6 +82,7 @@ $(document).ready(function() {
       $(".final-output").show();
       $("#teller-wrapper").hide();
       $(".final-output").html("<p>" + newFortuneTeller.fortunes[$(this).text()-1] + "</p>");
+      $("#output").hide();
       $(".final-output").append("<div id='play-again' onClick='window.location.reload()'>Play Again</div>");
 
       $("#number-div").hide();

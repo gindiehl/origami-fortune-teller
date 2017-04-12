@@ -5,14 +5,17 @@
     <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css">
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="https://npmcdn.com/draggabilly@2.1/dist/draggabilly.pkgd.min.js"></script>
     <script src="js/business.js"></script>
     <script src="js/ui.js"></script>
     <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Sniglet" rel="stylesheet">
+    <link href="img/first.png" rel="icon" type="image/png" />
+    <title>Origami Fortune Teller</title>
   </head>
   <body>
     <div class="jumbotron">
-      <h1> Origami </h1>
+      <h1> Origami Fortune Teller </h1>
     </div>
     <div class="container">
 
@@ -20,20 +23,16 @@
 
       <div id = "name-div" class="section">
         <input type="text" id="userName" placeholder="Enter your name">
-        <button class="btn btn-success" type="button" id="name" >Enter</button>
+        <button class="btn" type="button" id="name" >Enter</button>
       </div>
 
       <div class="dont-show section" id="color-div">
-        <input type="text" id="userColor" placeholder="Enter your favourite color">
-        <button class="btn btn-success" type="button" id="color">Enter</button>
+        <input type="text" id="userColor" placeholder="Enter a color">
+        <button class="btn" type="button" id="color">Enter</button>
       </div>
 
-      <div class="dont-show section" id="number-div">
-        <input type="text" id="userNumber" placeholder="Enter a number">
-        <button class="btn btn-success" type="button" id="number">Enter</button>
-      </div>
 
-      <div id="teller-wrapper">
+      <div id="teller-wrapper" class="draggable">
         <!-- <img class="teller" id="closed" src="img/first.png" alt="" /> -->
         <div id="moving-tellers" class="">
           <img class="teller run dont-show" src="img/second.png" alt="" />
