@@ -5,37 +5,43 @@
 
 $(document).ready(function() {
 
+  // call draggable function (from external library)
   var $draggable = $('.draggable').draggabilly({
-  // options...
   })
 
 
-  // animation
-  // animation
-  // animation
-  var animate = function(word, after) {
-    // $("#letters").show();
 
+  //  begin animation function, with two arguments
+  var animate = function(word, after) {
+    // create a variable to tell the loop how many times to run (dependent upon the length of the first argument (ex: a string) that is passed)
     var times = word.length;
+    // split the first argument into an array
     var splitWord = word.split("");
 
+    // create a loop that increments down to 0 from the number stored in "times" variable
     (function myLoop (i) {
+      // this is a timing function, separating each iteration of the loop by 600 milliseconds
       setTimeout(function () {
+        // toggle (show and hide) the two origami images
+        $(".run").toggle();
+        // targeting the letters div, this will go through each letter in splitWord array
+        // the math in this argument comes from i, which is originally intended to count DOWN from the length of the word, to 0
+        // This value is manipulated in order to call the index values of out splitWord array, in the appropriate order
+        $("#letters").text(splitWord[(i-times)*-1]);
 
-          $(".run").toggle();
-          $("#letters").text(splitWord[(i-times)*-1]);
-
+        // if i is 'truthy' continue to call our loop function
         if (--i) {
-           myLoop(i);
+          myLoop(i); // < thats this
           } else {
-             $(after).show();
-             $("#letters").text("");
-            //  $("#letters").hide();
+            // once i reaches 0 / 'falsey,' then we will show() a div determined by our second argument
+            $(after).show();
+            // clear the letters div
+            $("#letters").text("");
           }
       }, 600)
     })(times);
   }
-
+  // end animation
 
   // instantiate new user object instance
   var newUser = new User("", "");
