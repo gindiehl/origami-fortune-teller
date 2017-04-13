@@ -9,14 +9,14 @@ function FortuneTeller(fortunes, availOptions) {
 var newFortuneTeller = new FortuneTeller([], [[1,4,8,5],[2,3,6,7]]);
 
 newFortuneTeller.fortunes = [
-  "You are fortune 1!",
-  "You are fortune 2!",
-  "You are fortune 3!",
-  "You are fortune 4!",
-  "You are fortune 5!",
-  "You are fortune 6!",
-  "You are fortune 7!",
-  "You are fortune 8!"
+  "Caffeine will no longer save you",
+  "Uncaught ReferenceError: 'Your Variable' is not defined",
+  "Aw shucks! Your partner will push empty code to your master repo.",
+  "Ack! Your life is like a Cathy comic!",
+  "You will receive per diem in your next job",
+  "You will end up pairing up with the same person everyday until you graduate!!",
+  "Congrats! You got a paid internship!",
+  "Eeek !! You will forget to add document.ready to your UI!!"
 ]
 
 // create User Object constructor
