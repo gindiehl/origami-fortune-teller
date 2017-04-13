@@ -35,8 +35,8 @@
       <div id="teller-wrapper" class="draggable">
         <!-- <img class="teller" id="closed" src="img/first.png" alt="" /> -->
         <div id="moving-tellers" class="">
-          <img class="teller run dont-show" src="img/second.png" alt="" />
-          <img class="teller run" src="img/third.png" alt="" />
+          <img class="teller run dont-show" src="img/second.png" alt=""  usemap="#second"/>
+          <img class="teller run" src="img/third.png" alt="" usemap="#third"/>
         </div>
       </div>
 
@@ -45,5 +45,25 @@
     <div id="output" class="dont-show"></div>
     <div class="final-output dont-show"></div>
 
+    <map name="third">
+      <area shape="poly" coords="311,274,330,133,572,327" alt="3">
+      <area shape="poly" coords="321,294,335,491,563,371" alt="6">
+      <area shape="poly" coords="299,301,313,494,119,346" alt="7">
+      <area shape="poly" coords="292,272,122,323,315,134" alt="2">
+    </map>
+    <map name='second'>
+      <area shape="poly" coords="293,269,344,65,501,291" alt="4">
+      <area shape="poly" coords="492,306,282,531,289,281" alt="5">
+      <area shape="poly" coords="252,492,90,278,278,302" alt="8">
+      <area shape="poly" coords="276,287,302,32,89,260" alt="1">
+    </map>
+
   </body>
+      <!-- <script>
+     $("area").click(function() {
+       var fortune = ($(this).attr('alt') -1);
+      //  alert($(this).attr('alt'));
+       alert(newFortuneTeller.fortunes[fortune]);
+     });
+     </script> -->
 </html>

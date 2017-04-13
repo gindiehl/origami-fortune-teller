@@ -78,10 +78,18 @@ $(document).ready(function() {
       var options = newFortuneTeller.availOptions[0];
     }
 
-    $("#output").html("<p>Available options: </p>");
-    // loop through the options, and for each option, append to the output
-    options.forEach(function(option) {
-    $("#output").append("<span class='option-span'>" + option + "</span> ");
+    // $("#output").html("<p>Available options: </p>");
+    // // loop through the options, and for each option, append to the output
+    // options.forEach(function(option) {
+    // $("#output").append("<span class='option-span'>" + option + "</span> ");
+    //
+    //
+    // });
+
+    $("area").click(function() {
+      var fortune = ($(this).attr('alt') -1);
+      //  alert($(this).attr('alt'));
+      alert(newFortuneTeller.fortunes[fortune]);
     });
     //----------------------------------------------------------option click
     $(".option-span").click(function() {

@@ -13,10 +13,10 @@
   display: none;
 }
 .teller {
-  padding: 18px;
-  width: 400px;
   -webkit-filter: drop-shadow(10px 10px 10px #777);
   filter: drop-shadow(10px 10px 10px #777);
+  cursor:url(../img/finger.png), auto;
+
 }
 .jumbotron, h1 {
   background-color: white;
@@ -57,4 +57,7 @@ button:hover, #play-again:hover, .option-span:hover {
   display: inline-block;
   margin: 10px;
   cursor: pointer;
+}
+area {
+  cursor:url(../img/finger.png), auto;
 }
