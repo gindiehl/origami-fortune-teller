@@ -1,8 +1,9 @@
 # Origami Fortune Teller
-#### Origami Fortune Teller, aka Cootie Catcher takes user input and displays a fortune
+
 #### By Jin Camou, Sowmya Dinavahi, Trevor Fast, Sean Pierce
+
 ## Description
-This a a more detailed description of what the software does. Be specific and leave nothing to chance. This is a good place to really inform the user about your code.
+Origami Fortune Teller, aka "Cootie Catcher" takes user input and displays a fortune by shuffling using the length of string using javascript.
 ## Project Specs:
 * The program will receive user name.
   * **Input**: Sean
@@ -19,12 +20,12 @@ This a a more detailed description of what the software does. Be specific and le
   _front end: receive input and store value as variable_
 * The program will ask the user to select an available number (should either be odd or even, respectively).
   * **Input**: 3
-  * **Output**: _fortune teller opens flap 3 and displays fortune_
+  * **Output**: _fortune teller clicks on the number 3 and displays fortune_
   _front end: display fortune_
 ## Setup/Installation Requirements
 * Clone or download repo
 * Open index.html file in browser
-* Coming soon: Or visit _github.io/thisrepo/origami-fortune-teller_
+* Or visit seanpierce.github.io/origami-fortune-teller_
 ## Known Bugs
 None
 ## Technologies Used
@@ -32,7 +33,7 @@ None
 * CSS3/ Bootstrap
 * Javascript/ Jquery
 ## Support and contact details
-_contact info here_
+_sumler.sean@gmail.com, jincamou@gmail.com, sowmya.dsl@gmail.com, trevorrfast@gmail.com_
 ### License
 _MIT_
 Copyright (c) _2017_ **Jin Camou, Sowmya Dinavahi, Trevor Fast, Sean Pierce**
