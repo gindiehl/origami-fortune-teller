@@ -84,16 +84,16 @@ $(document).ready(function() {
 
     $("#output").text("Available options: ");
     // loop through the options, and for each option, append to the output
-    options.forEach(function(option, i = 0) {
-      $("#output").append("<span class='option-span'>" + option + "</span> ");
-      $('.hover-click:nth-child(' + (i+1) + ')').attr('data-value', option);
+    // options.forEach(function(option, i = 0) {
+      // $("#output").append("<span class='option-span'>" + option + "</span> ");
+      // $('.hover-click:nth-child(' + (i+1) + ')').attr('data-value', option);
     // $("#output").html("<p>Available options: </p>");
     // // loop through the options, and for each option, append to the output
     // options.forEach(function(option) {
     // $("#output").append("<span class='option-span'>" + option + "</span> ");
     //
-    //
-    });
+    // //
+    // });
 
     $("area").click(function() {
       var fortune = ($(this).attr('alt') -1);

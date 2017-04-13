@@ -16,8 +16,18 @@
   -webkit-filter: drop-shadow(10px 10px 10px #777);
   filter: drop-shadow(10px 10px 10px #777);
   cursor:url(../img/finger.png), auto;
-
 }
+#teller-wrapper {
+  transition: all 0s;
+}
+#invisible {
+  top: 0;
+  left: 0;
+  transform: translateX(50%);
+  position: absolute;
+  cursor:url(../img/finger.png), auto;
+}
+
 .jumbotron, h1 {
   background-color: white;
 }
@@ -60,13 +70,4 @@ button:hover, #play-again:hover, .option-span:hover {
 }
 area {
   cursor:url(../img/finger.png), auto;
-}
-#moving-tellers {
-  position: absolute;
-}
-
-#invisible {
-  top: 0;
-  left: 0;
-  position: absolute;
 }
