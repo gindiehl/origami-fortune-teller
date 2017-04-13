@@ -25,7 +25,7 @@ Origami Fortune Teller, aka "Cootie Catcher" takes user input and displays a for
 ## Setup/Installation Requirements
 * Clone or download repo
 * Open index.html file in browser
-* Or visit seanpierce.github.io/origami-fortune-teller_
+* Or visit seanpierce.github.io/origami-fortune-teller
 ## Known Bugs
 None
 ## Technologies Used
