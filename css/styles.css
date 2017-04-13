@@ -7,13 +7,14 @@
 #output, .final-output {
   margin-top: 20px;
   font-size: 2em;
-
+}
+#teller-wrapper {
+  transition: all 0s;
 }
 .dont-show{
   display: none;
 }
 .teller {
-  padding: 18px;
   width: 400px;
   -webkit-filter: drop-shadow(10px 10px 10px #777);
   filter: drop-shadow(10px 10px 10px #777);
