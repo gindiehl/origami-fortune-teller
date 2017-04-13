@@ -53,6 +53,7 @@ button:hover, #play-again:hover, .option-span:hover {
 }
 #play-again {
   border: solid 2px black;
+  font-size: 18px;
   padding: 1em;
   border-radius: 5px;
   display: inline-block;
