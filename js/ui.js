@@ -13,6 +13,8 @@ $(document).ready(function() {
 
   //  begin animation function, with two arguments
   var animate = function(word, after) {
+      $("#invisible").show();
+
     // create a variable to tell the loop how many times to run (dependent upon the length of the first argument (ex: a string) that is passed)
     var times = word.length;
     // split the first argument into an array
@@ -37,6 +39,8 @@ $(document).ready(function() {
             $(after).show();
             // clear the letters div
             $("#letters").text("");
+            $("#invisible").hide();
+
           }
       }, 600)
     })(times);
@@ -93,24 +97,25 @@ $(document).ready(function() {
 
     $("area").click(function() {
       var fortune = ($(this).attr('alt') -1);
-      //  alert($(this).attr('alt'));
-      alert(newFortuneTeller.fortunes[fortune]);
-    });
-    //----------------------------------------------------------option click
-    $(".option-span").click(function() {
+
       $(".final-output").show();
       $("#teller-wrapper").hide();
-      $(".final-output").html("<p>" + newFortuneTeller.fortunes[$(this).text()-1] + "</p>");
+      $(".final-output").html("<p>" + newFortuneTeller.fortunes[fortune] + "</p>");
       $("#output").hide();
       $(".final-output").append("<div id='play-again' onClick='window.location.reload()'>Play Again</div>");
-
-      $("#number-div").hide();
-      });
+    });
+    //----------------------------------------------------------option click
+    // $(".option-span").click(function() {
+    //   $(".final-output").show();
+    //   $("#teller-wrapper").hide();
+    //   $(".final-output").html("<p>" + newFortuneTeller.fortunes[$(this).text()-1] + "</p>");
+    //   $("#output").hide();
+    //   $(".final-output").append("<div id='play-again' onClick='window.location.reload()'>Play Again</div>");
+    //
+    //   $("#number-div").hide();
+    // });
 
     });
 
-    $(".hover-click").click(function() {
-      alert($(this).attr('data-value'));
-    });
 
   });
