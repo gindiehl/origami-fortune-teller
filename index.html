@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="https://npmcdn.com/draggabilly@2.1/dist/draggabilly.pkgd.min.js"></script>
+    <script src="js/business.js"></script>
+    <script src="js/ui.js"></script>
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Sniglet" rel="stylesheet">
+    <link href="img/first.png" rel="icon" type="image/png" />
+    <title>Origami Fortune Teller</title>
+  </head>
+  <body>
+    <div class="jumbotron">
+      <h1> Origami Fortune Teller </h1>
+    </div>
+    <div class="container">
+
+      <div id="letters"></div>
+
+      <div id = "name-div" class="section">
+        <input type="text" id="userName" placeholder="Enter your name"required>
+        <button class="btn" type="button" id="name" >Enter</button>
+      </div>
+
+      <div class="dont-show section" id="color-div">
+        <input type="text" id="userColor" placeholder="Enter a color">
+        <button class="btn" type="button" id="color">Enter</button>
+      </div>
+
+      <div id="pick" class="dont-show section">
+        <h1>Click a number to see your future.</h1>
+      </div>
+
+      <div id="teller-wrapper" class="draggable">
+        <!-- <img class="teller" id="closed" src="img/first.png" alt="" /> -->
+        <div id="moving-tellers" class="">
+          <img class="teller run dont-show" src="img/second.png" alt=""  usemap="#second"/>
+          <img class="teller run" src="img/third.png" alt="" usemap="#third"/>
+          <img id="invisible" src="img/overlay.png" alt="transparent overlay" />
+        </div>
+      </div>
+
+    </div>
+
+    <div class="final-output dont-show"></div>
+
+    <map name="third">
+      <area shape="poly" coords="311,274,330,133,572,327" alt="3">
+      <area shape="poly" coords="321,294,335,491,563,371" alt="6">
+      <area shape="poly" coords="299,301,313,494,119,346" alt="7">
+      <area shape="poly" coords="292,272,122,323,315,134" alt="2">
+    </map>
+    <map name='second'>
+      <area shape="poly" coords="293,269,344,65,501,291" alt="4">
+      <area shape="poly" coords="492,306,282,531,289,281" alt="5">
+      <area shape="poly" coords="252,492,90,278,278,302" alt="8">
+      <area shape="poly" coords="276,287,302,32,89,260" alt="1">
+    </map>
+
+  </body>
+      <!-- <script>
+     $("area").click(function() {
+       var fortune = ($(this).attr('alt') -1);
+      //  alert($(this).attr('alt'));
+       alert(newFortuneTeller.fortunes[fortune]);
+     });
+     </script> -->
+</html>

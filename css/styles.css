@@ -1,0 +1,76 @@
+*{
+  text-align: center;
+  font-family: 'Sniglet', cursive;
+  transition: all 0.5s;
+}
+
+#output, .final-output {
+  margin-top: 20px;
+  font-size: 2em;
+
+}
+.dont-show{
+  display: none;
+}
+.teller {
+  -webkit-filter: drop-shadow(10px 10px 10px #777);
+  filter: drop-shadow(10px 10px 10px #777);
+  cursor:url(../img/finger.png), auto;
+}
+#teller-wrapper {
+  transition: all 0s;
+}
+#invisible {
+  top: 0;
+  left: 0;
+  transform: translateX(50%);
+  position: absolute;
+  cursor:url(../img/finger.png), auto;
+}
+
+.jumbotron, h1 {
+  background-color: white;
+}
+.section{
+  font-size: 34px;
+}
+input {
+  border: 0px solid;
+}
+input:focus {
+  outline: none;
+}
+.container{
+  font-size: 30px;
+}
+.btn {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+button:hover, #play-again:hover, .option-span:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+#play-again {
+  border: solid 2px black;
+  padding: 1em;
+  border-radius: 5px;
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.option-span {
+  border-radius: 5px;
+  font-size: 1.5em;
+  border: solid 2px black;
+  padding: 0.5em;
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
+}
+area {
+  cursor:url(../img/finger.png), auto;
+}
+.final-output{
+  font-size: 75px;
+}
