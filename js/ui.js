@@ -13,6 +13,7 @@ $(document).ready(function() {
 
   //  begin animation function, with two arguments
   var animate = function(word, after) {
+    $("#teller-wrapper").css('z-index', '-1');
     // create a variable to tell the loop how many times to run (dependent upon the length of the first argument (ex: a string) that is passed)
     var times = word.length;
     // split the first argument into an array
@@ -37,6 +38,7 @@ $(document).ready(function() {
             $(after).show();
             // clear the letters div
             $("#letters").text("");
+            $("#teller-wrapper").css('z-index', 'inherit');
           }
       }, 600)
     })(times);
@@ -51,6 +53,10 @@ $(document).ready(function() {
   $("#name").click(function() {
     var inputtedName = $("#userName").val();//collect & store user input for name
     newUser.name = inputtedName;
+    if (!inputtedName) {
+      exit;
+    }
+
       $(".section").hide();
       var showThis = "#color-div";
     // animation function, passing name
@@ -64,6 +70,9 @@ $(document).ready(function() {
   $("#color").click(function() {
     var inputtedColor =$("#userColor").val(); //collect ui for color
     newUser.color = inputtedColor;
+    if (!inputtedColor) {
+      exit;
+    }
 
     $(".section").hide();
     var showThis = "#output";
